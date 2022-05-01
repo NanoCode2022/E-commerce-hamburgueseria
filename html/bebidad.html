@@ -63,9 +63,11 @@
                     <p class="titulo_filtro">Precio</p>
                     <input type="text" placeholder="Minimo" class="input_filtro">
                     <input type="text" placeholder="Maximo" class="input_filtro">
+                    <button id="button_filtro">buscar</button>
                     <p class="titulo_filtro">Ordenar Por</p>
                     <option value="menor a mayor" class="option_filtro">Menor a Mayor</option>
                     <option value="mayor a menor" class="option_filtro">Mayor a Menor</option>
+                    <button onclick="location.href = location.href">eliminar filtro</button>
                 </div>
             </div>
 
@@ -130,7 +132,9 @@
         </footer>
     </div>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../bebida.js"></script>
-    <script src="../func.js"></script>
+    <script src="../js/bebida.js"></script>
+    <script src="../app.js"></script>
+    <script src="../filtroJS/filtroBebida.js"></script>
+    <script src="../filtroJS/filtro.js"></script>
 </body>
 </html>

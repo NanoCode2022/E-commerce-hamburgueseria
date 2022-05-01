@@ -20,9 +20,19 @@ function enviar(event){
     event.preventDefault()
     const registrados = new persona (inputs[0].value,inputs[1].value,inputs[2].value,inputs[3].value,inputs[4].value);
     
-    // Operador ternario
-    maxCar() === true && minCar() === true && maxNum() === true && valEmail() === true ? console.log(`El nombre es: ${registrados.nombre} El appelido es: ${registrados.apellido} El email es: ${registrados.gmail} El telefono es: ${registrados.telefono} La contraseña es: ${registrados.contraseña}`) : maxCar();
-    minCar();maxNum();valEmail();
+    if(maxCar() === true && minCar() === true && maxNum() === true && valEmail() === true){
+        console.log(`El nombre es: ${registrados.nombre} El appelido es: ${registrados.apellido} El email es: ${registrados.gmail} El telefono es: ${registrados.telefono} La contraseña es: ${registrados.contraseña}`);
+        inputs[0].value = '';
+        inputs[1].value = '';
+        inputs[2].value = '';
+        inputs[3].value = '';
+        inputs[4].value = '';
+     }else{
+        console.log( maxCar())
+        console.log( minCar())
+        console.log( maxNum())
+        console.log(valEmail())
+    }
 }
 
 // maximo de caracteres en nombre y apellido

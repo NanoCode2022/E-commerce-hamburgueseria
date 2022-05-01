@@ -1,0 +1,9 @@
+[
+    {"src": "../img/ensalada.jpg","btn": "+","precio":"70"},
+    {"src": "../img/ensalada1.jpg", "btn": "+","precio":"100"},
+    {"src": "../img/endalada2.jpg", "btn": "+","precio":"160"},
+    {"src": "../img/endalada3.jpg", "btn": "+","precio":"200"},
+    {"src": "../img/endalada4.jpg", "btn": "+","precio":"153"},
+    {"src": "../img/endalada5.jpg", "btn": "+","precio":"90"},
+    {"src": "../img/endalada6.jpg", "btn": "+","precio":"105"}
+]

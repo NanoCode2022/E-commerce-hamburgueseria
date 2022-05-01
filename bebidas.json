@@ -1,9 +1,0 @@
-[
-    {"src": "../img/bebida.jpg","btn": "+","precio":"400"},
-    {"src": "../img/bebida1.jpg", "btn": "+","precio":"400"},
-    {"src": "../img/bebida2.jpg", "btn": "+","precio":"400"},
-    {"src": "../img/bebida3.jpg", "btn": "+","precio":"400"},
-    {"src": "../img/bebida4.jpg", "btn": "+","precio":"400"},
-    {"src": "../img/bebida5.jpg", "btn": "+","precio":"400"},
-    {"src": "../img/bebida6.jpg", "btn": "+","precio":"400"}
-]

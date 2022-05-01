@@ -1,49 +1,67 @@
-const carrito = document.getElementById('div_carrito');
-const btnAgregar = document.querySelectorAll('#btn_agregar');
-const listaProducto = document.querySelectorAll('.div_info');
-const btnVaciar = document.getElementById('btn_vaciar');
-const btnProcesar = document.getElementById('btn_procesar');
+function imprimirProductos(){
+    const contenedor = document.getElementById('div_container')
+    const buttonFiltro = document.getElementById('button_filtro')
+    for (let i = 0; i < productos.length; i++) {
+        const element = productos[i];
+        const {src,btn,precio} = element;
+        const creado = document.createElement('div');
+        buttonFiltro.addEventListener('click', ()=>{
+            creado.remove()
+        })
+        creado.className = 'div_info';
+        const carta =  `
+        <img src="${src}" alt="" class="img_hambur">
+        <div id="btn_agregar" class="btnAgregar">${btn}</div>
+        <p class="precios">${precio}</p>`;
+        creado.innerHTML = carta;
+        contenedor.append(creado)
+    }    
+    const boton = document.getElementsByClassName('btnAgregar');
+    for (let i = 0; i < boton.length; i++) {
+    const element = boton[i];
+    element.addEventListener('click', agragarAlCarrito);
+}
+}
 
 
-// agregar al carrito
-btnAgregar.forEach((botnPra)=>{
-    botnPra.addEventListener('click',()=>{
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 800,
-            didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-          })
-          
-          Toast.fire({
-            background: '#11111199',
-            color: '#ddd',
-            icon: 'success',
-            iconColor: '#2E6454',
-            title: 'Agregado al Carrito'
-          })
-    })
-    botnPra.addEventListener('click', quicleada);
-})
 
-const lista = [];
-const listaPrecios = []
-function quicleada(e){
+function agragarAlCarrito(e){
     const button = e.target;
-    const item = button.closest('.div_info')
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 800,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        background: '#11111199',
+        color: '#ddd',
+        icon: 'success',
+        iconColor: '#2E6454',
+        title: 'Agregado al Carrito'
+      })    
+      guardando(button)
+}
+const lista = [];
+const listaPrecios = [];
+function guardando(button){
+    const item = button.closest('.div_info');
     const img = item.querySelector('.div_info img').src;
     const precios = item.querySelector('.div_info p').textContent;
-
-    agregarContent(img,precios);
+    imprimirCarrito(img,precios);
     lista.push({img,precios});
-    listaPrecios.push(precios);
-    guardarStorage(lista);
+    listaPrecios.push(precios)
+    guardarLS(lista);
 }
-function agregarContent(img,precios){
+
+const carrito = document.getElementById('div_carrito');
+
+function imprimirCarrito(img,precios){
     const row = document.createElement('div');
     const content = `
     <div class="div_compra_realizada">
@@ -53,27 +71,24 @@ function agregarContent(img,precios){
     `;
     row.innerHTML = content;
     carrito.append(row)
-    
 }
-
-// guardar productos en LS
-function guardarStorage(lista){
+function guardarLS(lista){
     const guardarLocal = (clave,valor) =>{
         localStorage.setItem(clave,valor);   
     }
-   guardarLocal("productos", JSON.stringify(lista));
-   obtencionLS()
+   guardarLocal("compra", JSON.stringify(lista));
+   obtencionLS();
 }
 
-// obtencion del LS
+
 function obtencionLS(){
-    if ( localStorage.getItem('productos')) {
-        const obtencion = JSON.parse(localStorage.getItem('productos'))
-    }
+    const obtencion = JSON.parse(localStorage.getItem('compra') || [])
 }
 
 
-// suma de los productos y lo muestra en carrito
+
+const btnProcesar = document.getElementById('btn_procesar');
+// suma del carrito
 btnProcesar.addEventListener('click', sumaTotal);
 
 function sumaTotal(){
@@ -90,12 +105,12 @@ function precioEnCarrito(total){
     totalPrecio.innerHTML = `$${total}`;
 }
 
-
+const btnVaciar = document.getElementById('btn_vaciar');
 // vaciar carrito
 btnVaciar.addEventListener('click', vaciarCarrito);
 
 function vaciarCarrito(){
-    localStorage.clear('productos');
+    localStorage.clear('compra');
     document.querySelectorAll('.div_compra_realizada').forEach((e)=> e.remove());
     listaPrecios.splice(listaPrecios.lenght);
 }
