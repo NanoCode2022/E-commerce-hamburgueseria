@@ -1,7 +1,7 @@
 const produc = [];
 const recoleccion = async ()=>{
     const resp = await
-    fetch('json/hamburguesas.json')
+    fetch('../json/hamburguesas.json')
     const data = await resp.json()
     produc.push(...data)
 
