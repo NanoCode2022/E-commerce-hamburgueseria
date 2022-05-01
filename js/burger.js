@@ -2,7 +2,7 @@ const productos = [];
 
 const peticion = async ()=>{
     const resp = await
-    fetch('../json/hamburguesas.json')
+    fetch('../hamburguesa.json')
     const data = await resp.json()
     productos.push(...data)
     imprimirProductos()
