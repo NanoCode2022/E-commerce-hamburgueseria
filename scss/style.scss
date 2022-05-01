@@ -1,0 +1,582 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: #111;
+
+        #container{
+            width: 100%;
+            height: 100%;
+
+                #header{
+                    background-color: transparent;
+                    width: 100%;
+
+                        h1{
+                            position: absolute;
+                            color: #eee;
+                        }
+
+
+                        #btn_menu{
+                            display: none;
+                        }
+                        #btn_carrito{
+                            display: none;
+                        }
+                        .label_menu{
+                            
+                                .img_menu{
+                                    background-color: #dddddd56;
+                                    width: 27px;
+                                    height: 27px;
+                                    position: relative;
+                                    left: 93%;
+                                }
+                        }
+
+                        .label_carrito{
+
+                                .img_carrito{
+                                    position: relative;
+                                    left: 78%;
+                                    background-color: #dddddd56;
+                                    margin-top: 5px;
+                                    margin-right: 10px;
+                                    width: 27px;
+                                    height: 27px
+                                }
+                        }
+
+                        #div_carrito{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #222222cb;
+                            margin-top: -5000px;
+                            z-index: 5;
+                            overflow: auto;
+                            
+
+                                h2{
+                                    text-align: center;
+                                    color: #ddd;
+                                }
+
+                                .div_productos{
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    border-top: 2px solid #ccc;
+                                    color: #ccc;
+                                }
+
+                                .div_compra_realizada{
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: row;
+
+                                    .img_compra_realizada{
+                                        width: 100px;
+                                        margin-bottom: 12px;
+                                    }
+
+                                    .precios_realizados{
+                                        color: #ccc;
+                                        position: relative;
+                                        left: 25%;
+                                    }
+                                }
+
+                                #precio_compra{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    position: absolute;
+                                    bottom: 25px;
+
+                                        .palabra_compra{
+                                            color: #ccc;
+                                            margin-right: 5px;
+                                        }
+
+                                        #precio_compra_p{
+                                            color: #ccc;
+                                            margin-right: 5px;
+                                        }
+                                }
+
+                                .div_btn{
+                                    width: 100%;
+                                    display: flex;
+                                    position:  absolute;
+                                    bottom: 0;
+                                   
+                                    justify-content: flex-end;
+                                    
+                                    
+                                    .btn_carrito{
+                                        background-color: transparent;
+                                        border: 1px solid #ddd;
+                                        color: #ccc;
+                                        padding: 3px;
+                                        margin-right: 5px;
+                                    }
+                                }
+
+                        }
+                        #btn_carrito:checked ~ #div_carrito{
+                            margin-top: 0%;
+                            transition: all .5s;
+                        }
+
+                        .div_extra{
+                            display: flex;
+                            justify-content: center;
+
+                                .buscador{
+                                    outline: none;
+                                    background-color: transparent;
+                                    border: 0;
+                                    padding: 3px;
+                                    border: 1px solid #ccc;
+                                    color: #ddd;
+                                }
+                        }
+                        .div_nav{
+                            position: absolute;
+                            width: 100%;
+                            height: 50%;
+                            background-color: #22222279;
+                            margin-top: -300%;
+
+                                .nav_ul{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+
+                                     .nav_ul_li{
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        list-style: none;
+
+                                            .nav_ul_li_a{
+                                                width: 100px;
+                                                height: 24px;
+                                                text-align: center;
+                                                text-decoration: none;
+                                                border-bottom: 1px solid #ddd;
+                                                color: #ddd;
+                                            }
+
+                                            
+                                     }
+                                }
+                        }
+                        #btn_menu:checked ~ .div_nav{
+                            margin-top: 0%;
+                        }
+
+                        
+
+                        
+                }
+
+                // main
+                #main{
+                    width: 100%;
+                    background-color: #111;
+                    z-index: 1;
+
+                        .div_filtros{
+                            display: flex;
+                            justify-content: end;
+                            height: 24px;
+                            background-color: transparent;
+                                #checkbox_filtro{
+                                    display: none;
+                                }
+                                .flecha_filtro{
+                                    background-color: #dddddd56;
+                                }
+
+                                .filtros{
+                                    margin-top: 24px;
+                                    position: absolute;
+                                    width: 50%;
+                                    height: 50%;
+                                    background-color: #111111b9;
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin-top: -4000px;
+
+                                        .input_filtro{
+                                            margin-top: 5px;
+                                            outline: none;
+                                            border: 0;
+                                            border-bottom: 1px solid #888;
+                                            background-color: transparent;
+                                            color: #ccc;
+                                        }
+
+                                        .option_filtro{
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            height: 25px;
+                                            margin-top: 5px;
+                                            background-color: transparent;
+                                            color: #ccc;
+                                            border: 1px solid #888;
+
+                                        }
+                                        p{
+                                            color: #bbb;
+                                            margin-left: 3px;
+                                        }
+
+                                        
+                                }
+                                #checkbox_filtro:checked ~ .filtros{
+                                    margin-top: 24px;
+                                }
+                        }
+
+                        .div_container{
+                            width: 100%;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                            row-gap: 10px;
+                            margin-top: 10px;
+
+                                .div_info{
+
+                                    .img_hambur{
+                                        width: 100%;
+                                        height: 75%;
+                                    }
+
+                                    #btn_agregar{
+                                        display: flex;
+                                        justify-content: center;
+                                        color: #888;
+                                        width: 15px;
+                                    }
+                                    
+                                    #btn_agregar:hover{
+                                        border-radius: 50%;
+                                        background-color: #555;
+                                    }
+
+                                    .precios{
+                                        color: #ccc;
+                                    }
+                                }
+                        }
+                }
+
+                // footer
+
+                #footer{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: transparent;
+
+                        h2{
+                            margin-bottom: 10px;
+                            color: #ccc;
+                        }
+                      
+
+                        .div_contactos{
+                            display: flex;
+                            flex-direction: column;
+                                .telefono{
+                                    display: flex;
+                                    flex-direction: row;
+                                    margin-bottom: 8px;
+                                    color: #ccc;
+                                }
+
+                                .gmail{
+                                    display: flex;
+                                    flex-direction: row;
+                                    color: #ccc
+                                }
+                        }
+                }
+
+                // seccion bebidas
+                // main
+
+                #main{
+
+                        .div_containers{
+                            @extend .div_container;
+                            row-gap: 20px;
+
+                                .div_info{
+
+                                        .img_bebidas{
+                                            @extend .img_hambur;
+                                            height: 90%;
+                                        }
+                                }
+                        }
+                }
+
+                // seccion registro
+                // main
+                #main_registrar{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: #111;
+
+                        .div_expli{
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+
+                            h3{
+                                color: #ddd;
+
+                            }
+                            p{
+                                color: #ddd;
+                                width: 75%;
+                                text-align: center;
+                            }
+                        }
+
+                        .div_form{
+                            width: 100%;
+                            margin-top: 15px;
+                            
+                                #formulario{
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                        .laber_titulos{
+                                            margin-top: 8px;
+                                            color: #ddd;
+                                        }
+
+                                        .input_escribir{
+                                            outline: none;
+                                            background: transparent;
+                                            border: 0;
+                                            border: 1px solid #eee;
+                                            width: 50%;
+                                            height: 22px;
+                                            color: #ddd;
+                                        }
+                                        .input_escribir:focus{
+                                            filter: blur(.5px);
+                                        }
+
+                                        #boton_form{
+                                            background-color: transparent;
+                                            border: 1px solid #ddd;
+                                            color: #ccc;
+                                            margin-top: 7px;
+                                            margin-bottom: 7px;
+                                            padding: 3px;
+                                        }
+                                }
+                        }
+                }
+                
+        }
+}
+
+@media only screen and (min-width: 1280px) {
+    body{
+        height: 100%;
+
+            #container{
+
+                    #header{
+                        background-color: transparent;
+                        height: 120px;
+
+                            h1{
+                                width: 100%;
+                                text-align: center;
+                            }
+
+                            .label_menu{
+                                display: none;
+                            }
+
+                            .label_carrito{
+
+                                    .img_carrito{
+                                        background-color: #dddddd56;
+                                        margin-top: 5px;
+                                        width: 27px;
+                                        height: 27px;
+                                    }
+                            }
+
+                            #div_carrito{
+                                width: 19%;
+                                right: 0;
+                                margin-right: 10px;
+                                border: 1px solid #ccc;
+                                background-color: transparent;
+
+                                    h2{
+                                        color: #ddd;
+                                    }
+
+                                    .div_productos{
+                                        color: #ddd;
+                                        border-top: 2px solid #ccc;
+                                    }
+                            }
+
+                            .div_extra{
+                                position: relative;
+                                right: 22%;
+
+                                    .buscador{
+                                        border: 1px solid #ccc;
+                                        background-color: transparent;
+                                        color: #ddd;
+                                    }
+                            }
+                            .div_nav{
+                                width: 60%;
+                                margin-top: 0;
+                                position: relative;
+                                left: 20%;
+                                background-color: transparent;
+                                margin-top: 15px;
+
+                                    .nav_ul{
+                                        flex-direction: row;
+
+                                            .nav_ul_li{
+
+                                                    .nav_ul_li_a{
+                                                        border-bottom: 1px solid #ddd;
+                                                        color: #ddd;
+                                                    }
+                                            }
+                                    }
+                            }
+                    }
+
+                    #main{
+                        width: 60%;
+                        position: relative;
+                        left: 20%;
+
+                            .div_filtros{
+                                background-color: transparent;
+
+                                    .flecha_filtro{
+                                        background-color: #dddddd56;
+                                    }
+
+                                    .filtros{
+                                        background-color: #111111b9;
+                                        width: 13%;
+
+                                            .input_filtro{
+                                                background-color: transparent;
+                                                border: 1px solid #888;
+                                                color: #ccc;
+                                            }
+
+                                            .option_filtro{
+                                                background-color: transparent;
+                                                border: 1px solid  #888;
+                                                color: #ccc;
+                                            }
+                                            
+                                            p{
+                                                color: #bbb;
+                                                margin-left: 3px;
+                                            }
+                                    }
+                            }
+
+                            .div_container{
+                                grid-template-columns: 1fr 1fr 1fr 1fr;
+                                grid-template-rows: 1fr 1fr 1fr 1fr;
+                                column-gap: 12px;
+                                row-gap: 20px;
+                            }
+                    }
+
+                    #footer{
+                        width: 60%;
+                        height: 130px;
+                        position: relative;
+                        left: 20%;
+                        flex-direction: row;
+                        justify-content: space-around;
+
+                            h2{
+                                color: #ccc;
+                                text-align: center;
+                                width: 100%;
+                                font-size: 40px;
+                            }
+
+                            .div_contactos{
+                                width: 100%;
+                                align-items: center;
+                                    .telefono{
+                                        color: #ccc;
+                                        margin-bottom: 10px;
+                                    }
+
+
+                                    .gmail{
+                                        margin-top: 10px;
+                                        color: #ccc;
+                                    }
+                            }
+
+
+                    }
+
+                    #main_registrar{
+                        width: 65%;
+                        position: relative;
+                        left: 20%;
+                        flex-direction: row;
+
+                            .div_expli{
+                                width: 50%;
+                                margin-top: 15px;
+                            }
+                            .div_form{
+                                width: 50%;
+                                
+                                    #formulario{
+                                        align-items: start;
+                                            .input_escribir{
+                                                width: 300px;
+                                            }
+                                    }
+                            }
+                        
+                    }
+            }
+    }
+}

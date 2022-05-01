@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hamburgueseria</title>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <h1>BURGER</h1>
+
+    
+                    <input type="checkbox" id="btn_menu">
+                    <label for="btn_menu" class="label_menu"><img src="img/outline_list_black_24dp.png" alt="barras" class="img_menu"></label>
+        
+                    <input type="checkbox" id="btn_carrito">
+                    <label for="btn_carrito" class="label_carrito"><img src="img/outline_shopping_cart_black_24dp.png" alt="carrito" class="img_carrito"></label>
+
+                    <div id="div_carrito">
+                        <h2>CARRITO DE COMPRAS</h2>
+                        <div class="div_productos">
+                            <p>PRODUCTOS</p>
+                        </div>
+    
+                        <div id="precio_compra">
+                            <p class="palabra_compra">TOTAL</p>
+                            <p id="precio_compra_p"></p>
+                        </div>
+                        <div class="div_btn">
+                            <button id="btn_vaciar" class="btn_carrito">vaciar</button>
+                            <button id="btn_procesar" class="btn_carrito">procesar</button>
+                        </div>
+                    </div>
+
+            <div class="div_extra">
+                <input type="search" placeholder="buscar" class="buscador">
+            </div>
+
+            <div class="div_nav">
+                <ul class="nav_ul">
+                    <li class="nav_ul_li"><a href="index.html" class="nav_ul_li_a">HOME</a></li>
+                    <li class="nav_ul_li"><a href="/html/bebidad.html" class="nav_ul_li_a">BEBIDAS</a></li>
+                    <li class="nav_ul_li"><a href="/html/ensalada.html" class="nav_ul_li_a">ENSALADAS</a></li>
+                    <li class="nav_ul_li"><a href="/html/contacto.html" class="nav_ul_li_a">CONTACTO</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main id="main">
+
+            <div class="div_filtros">
+                <input type="checkbox" id="checkbox_filtro">
+                <label for="checkbox_filtro"><img src="img/outline_expand_more_black_24dp.png" alt="flecha-abajo" class="flecha_filtro"></label>      
+                
+                <div class="filtros">
+                    <p class="titulo_filtro">Precio</p>
+                    <input type="text" placeholder="Minimo" class="input_filtro">
+                    <input type="text" placeholder="Maximo" class="input_filtro">
+                    <p class="titulo_filtro">Ordenar Por</p>
+                    <option value="menor a mayor" class="option_filtro">Menor a Mayor</option>
+                    <option value="mayor a menor" class="option_filtro">Mayor a Menor</option>
+                </div>
+            </div>
+            <div class="div_container" id="div_container">
+                <!-- <div class="div_info">
+                    <img src="img/images.jpg" alt="" class="img_hambur">
+                    <div id="btn_agregar">+</div>
+                    <p class="precios">400</p>
+                </div>
+
+                <div class="div_info">
+                    <img src="img/images (1).jpg" alt="" class="img_hambur">
+                    <div id="btn_agregar">+</div>
+                    <p class="precios">400</p>
+                </div>
+
+                <div class="div_info">
+                    <img src="img/images (2).jpg" alt="" class="img_hambur">
+                    <div id="btn_agregar">+</div>
+                    <p class="precios">400</p>
+                </div>
+
+                <div class="div_info">
+                    <img src="img/images (3).jpg" alt="" class="img_hambur">
+                    <div id="btn_agregar">+</div>
+                    <p class="precios">400</p>
+                </div>
+
+                <div class="div_info">
+                    <img src="img/images (4).jpg" alt="" class="img_hambur">
+                    <div id="btn_agregar">+</div>
+                    <p class="precios">400</p>
+                </div>
+
+                <div class="div_info">
+                    <img src="img/images (5).jpg" alt="" class="img_hambur">
+                    <div id="btn_agregar">+</div>
+                    <p class="precios">400</p>
+                </div>
+
+                <div class="div_info">
+                    <img src="img/images (6).jpg" alt="" class="img_hambur">
+                    <div id="btn_agregar">+</div>
+                    <p class="precios">400</p>
+                </div>
+
+                <div class="div_info">
+                    <img src="img/images (7).jpg" alt="" class="img_hambur">
+                    <div id="btn_agregar">+</div>
+                    <p class="precios">400</p>
+                </div>
+
+                <div class="div_info">
+                    <img src="img/images (8).jpg" alt="" class="img_hambur">
+                    <div id="btn_agregar">+</div>
+                    <p class="precios">400</p>
+                </div>
+
+                <p class="precios">400</p>
+                <div class="div_info">
+                    <img src="img/images (9).jpg" alt="" class="img_hambur">
+                    <div id="btn_agregar">+</div>
+                    <p class="precios">400</p>
+                </div>
+            </div> -->
+        </main>
+
+        <footer id="footer">
+            <h2>BURGER</h2>
+            <div class="div_contactos">
+                <div class="telefono">
+                    <img src="img/outline_call_white_24dp.png" alt="telefono">
+                    <p>Telefono: 123 456 789</p>
+                </div>
+
+                <div class="gmail">
+                    <img src="img/outline_email_white_24dp.png" alt="email">
+                    <p>Gmail: burger@gmail.com</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="burger.js"></script>
+    <!-- <script src="app.js"></script> -->
+    <script src="func.js"></script>
+    
+</body>
+</html>

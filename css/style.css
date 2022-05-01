@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  height: 100vh;
+  background-color: #111; }
+  body #container {
+    width: 100%;
+    height: 100%; }
+    body #container #header {
+      background-color: transparent;
+      width: 100%; }
+      body #container #header h1 {
+        position: absolute;
+        color: #eee; }
+      body #container #header #btn_menu {
+        display: none; }
+      body #container #header #btn_carrito {
+        display: none; }
+      body #container #header .label_menu .img_menu {
+        background-color: #dddddd56;
+        width: 27px;
+        height: 27px;
+        position: relative;
+        left: 93%; }
+      body #container #header .label_carrito .img_carrito {
+        position: relative;
+        left: 78%;
+        background-color: #dddddd56;
+        margin-top: 5px;
+        margin-right: 10px;
+        width: 27px;
+        height: 27px; }
+      body #container #header #div_carrito {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #222222cb;
+        margin-top: -5000px;
+        z-index: 5;
+        overflow: auto; }
+        body #container #header #div_carrito h2 {
+          text-align: center;
+          color: #ddd; }
+        body #container #header #div_carrito .div_productos {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          border-top: 2px solid #ccc;
+          color: #ccc; }
+        body #container #header #div_carrito .div_compra_realizada {
+          width: 100%;
+          display: flex;
+          flex-direction: row; }
+          body #container #header #div_carrito .div_compra_realizada .img_compra_realizada {
+            width: 100px;
+            margin-bottom: 12px; }
+          body #container #header #div_carrito .div_compra_realizada .precios_realizados {
+            color: #ccc;
+            position: relative;
+            left: 25%; }
+        body #container #header #div_carrito #precio_compra {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          position: absolute;
+          bottom: 25px; }
+          body #container #header #div_carrito #precio_compra .palabra_compra {
+            color: #ccc;
+            margin-right: 5px; }
+          body #container #header #div_carrito #precio_compra #precio_compra_p {
+            color: #ccc;
+            margin-right: 5px; }
+        body #container #header #div_carrito .div_btn {
+          width: 100%;
+          display: flex;
+          position: absolute;
+          bottom: 0;
+          justify-content: flex-end; }
+          body #container #header #div_carrito .div_btn .btn_carrito {
+            background-color: transparent;
+            border: 1px solid #ddd;
+            color: #ccc;
+            padding: 3px;
+            margin-right: 5px; }
+      body #container #header #btn_carrito:checked ~ #div_carrito {
+        margin-top: 0%;
+        transition: all .5s; }
+      body #container #header .div_extra {
+        display: flex;
+        justify-content: center; }
+        body #container #header .div_extra .buscador {
+          outline: none;
+          background-color: transparent;
+          border: 0;
+          padding: 3px;
+          border: 1px solid #ccc;
+          color: #ddd; }
+      body #container #header .div_nav {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        background-color: #22222279;
+        margin-top: -300%; }
+        body #container #header .div_nav .nav_ul {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column; }
+          body #container #header .div_nav .nav_ul .nav_ul_li {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none; }
+            body #container #header .div_nav .nav_ul .nav_ul_li .nav_ul_li_a {
+              width: 100px;
+              height: 24px;
+              text-align: center;
+              text-decoration: none;
+              border-bottom: 1px solid #ddd;
+              color: #ddd; }
+      body #container #header #btn_menu:checked ~ .div_nav {
+        margin-top: 0%; }
+    body #container #main {
+      width: 100%;
+      background-color: #111;
+      z-index: 1; }
+      body #container #main .div_filtros {
+        display: flex;
+        justify-content: end;
+        height: 24px;
+        background-color: transparent; }
+        body #container #main .div_filtros #checkbox_filtro {
+          display: none; }
+        body #container #main .div_filtros .flecha_filtro {
+          background-color: #dddddd56; }
+        body #container #main .div_filtros .filtros {
+          margin-top: 24px;
+          position: absolute;
+          width: 50%;
+          height: 50%;
+          background-color: #111111b9;
+          display: flex;
+          flex-direction: column;
+          margin-top: -4000px; }
+          body #container #main .div_filtros .filtros .input_filtro {
+            margin-top: 5px;
+            outline: none;
+            border: 0;
+            border-bottom: 1px solid #888;
+            background-color: transparent;
+            color: #ccc; }
+          body #container #main .div_filtros .filtros .option_filtro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            margin-top: 5px;
+            background-color: transparent;
+            color: #ccc;
+            border: 1px solid #888; }
+          body #container #main .div_filtros .filtros p {
+            color: #bbb;
+            margin-left: 3px; }
+        body #container #main .div_filtros #checkbox_filtro:checked ~ .filtros {
+          margin-top: 24px; }
+      body #container #main .div_container, body #container #main .div_containers {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        row-gap: 10px;
+        margin-top: 10px; }
+        body #container #main .div_container .div_info .img_hambur, body #container #main .div_containers .div_info .img_hambur, body #container #main .div_containers .div_info .img_bebidas {
+          width: 100%;
+          height: 75%; }
+        body #container #main .div_container .div_info #btn_agregar, body #container #main .div_containers .div_info #btn_agregar {
+          display: flex;
+          justify-content: center;
+          color: #888;
+          width: 15px; }
+        body #container #main .div_container .div_info #btn_agregar:hover, body #container #main .div_containers .div_info #btn_agregar:hover {
+          border-radius: 50%;
+          background-color: #555; }
+        body #container #main .div_container .div_info .precios, body #container #main .div_containers .div_info .precios {
+          color: #ccc; }
+    body #container #footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: transparent; }
+      body #container #footer h2 {
+        margin-bottom: 10px;
+        color: #ccc; }
+      body #container #footer .div_contactos {
+        display: flex;
+        flex-direction: column; }
+        body #container #footer .div_contactos .telefono {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 8px;
+          color: #ccc; }
+        body #container #footer .div_contactos .gmail {
+          display: flex;
+          flex-direction: row;
+          color: #ccc; }
+    body #container #main .div_containers {
+      row-gap: 20px; }
+      body #container #main .div_containers .div_info .img_bebidas {
+        height: 90%; }
+    body #container #main_registrar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #111; }
+      body #container #main_registrar .div_expli {
+        display: flex;
+        align-items: center;
+        flex-direction: column; }
+        body #container #main_registrar .div_expli h3 {
+          color: #ddd; }
+        body #container #main_registrar .div_expli p {
+          color: #ddd;
+          width: 75%;
+          text-align: center; }
+      body #container #main_registrar .div_form {
+        width: 100%;
+        margin-top: 15px; }
+        body #container #main_registrar .div_form #formulario {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          body #container #main_registrar .div_form #formulario .laber_titulos {
+            margin-top: 8px;
+            color: #ddd; }
+          body #container #main_registrar .div_form #formulario .input_escribir {
+            outline: none;
+            background: transparent;
+            border: 0;
+            border: 1px solid #eee;
+            width: 50%;
+            height: 22px;
+            color: #ddd; }
+          body #container #main_registrar .div_form #formulario .input_escribir:focus {
+            filter: blur(0.5px); }
+          body #container #main_registrar .div_form #formulario #boton_form {
+            background-color: transparent;
+            border: 1px solid #ddd;
+            color: #ccc;
+            margin-top: 7px;
+            margin-bottom: 7px;
+            padding: 3px; }
+
+@media only screen and (min-width: 1280px) {
+  body {
+    height: 100%; }
+    body #container #header {
+      background-color: transparent;
+      height: 120px; }
+      body #container #header h1 {
+        width: 100%;
+        text-align: center; }
+      body #container #header .label_menu {
+        display: none; }
+      body #container #header .label_carrito .img_carrito {
+        background-color: #dddddd56;
+        margin-top: 5px;
+        width: 27px;
+        height: 27px; }
+      body #container #header #div_carrito {
+        width: 19%;
+        right: 0;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        background-color: transparent; }
+        body #container #header #div_carrito h2 {
+          color: #ddd; }
+        body #container #header #div_carrito .div_productos {
+          color: #ddd;
+          border-top: 2px solid #ccc; }
+      body #container #header .div_extra {
+        position: relative;
+        right: 22%; }
+        body #container #header .div_extra .buscador {
+          border: 1px solid #ccc;
+          background-color: transparent;
+          color: #ddd; }
+      body #container #header .div_nav {
+        width: 60%;
+        margin-top: 0;
+        position: relative;
+        left: 20%;
+        background-color: transparent;
+        margin-top: 15px; }
+        body #container #header .div_nav .nav_ul {
+          flex-direction: row; }
+          body #container #header .div_nav .nav_ul .nav_ul_li .nav_ul_li_a {
+            border-bottom: 1px solid #ddd;
+            color: #ddd; }
+    body #container #main {
+      width: 60%;
+      position: relative;
+      left: 20%; }
+      body #container #main .div_filtros {
+        background-color: transparent; }
+        body #container #main .div_filtros .flecha_filtro {
+          background-color: #dddddd56; }
+        body #container #main .div_filtros .filtros {
+          background-color: #111111b9;
+          width: 13%; }
+          body #container #main .div_filtros .filtros .input_filtro {
+            background-color: transparent;
+            border: 1px solid #888;
+            color: #ccc; }
+          body #container #main .div_filtros .filtros .option_filtro {
+            background-color: transparent;
+            border: 1px solid  #888;
+            color: #ccc; }
+          body #container #main .div_filtros .filtros p {
+            color: #bbb;
+            margin-left: 3px; }
+      body #container #main .div_container, body #container #main .div_containers {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        column-gap: 12px;
+        row-gap: 20px; }
+    body #container #footer {
+      width: 60%;
+      height: 130px;
+      position: relative;
+      left: 20%;
+      flex-direction: row;
+      justify-content: space-around; }
+      body #container #footer h2 {
+        color: #ccc;
+        text-align: center;
+        width: 100%;
+        font-size: 40px; }
+      body #container #footer .div_contactos {
+        width: 100%;
+        align-items: center; }
+        body #container #footer .div_contactos .telefono {
+          color: #ccc;
+          margin-bottom: 10px; }
+        body #container #footer .div_contactos .gmail {
+          margin-top: 10px;
+          color: #ccc; }
+    body #container #main_registrar {
+      width: 65%;
+      position: relative;
+      left: 20%;
+      flex-direction: row; }
+      body #container #main_registrar .div_expli {
+        width: 50%;
+        margin-top: 15px; }
+      body #container #main_registrar .div_form {
+        width: 50%; }
+        body #container #main_registrar .div_form #formulario {
+          align-items: start; }
+          body #container #main_registrar .div_form #formulario .input_escribir {
+            width: 300px; } }

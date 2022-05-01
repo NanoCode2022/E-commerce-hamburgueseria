@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Hamburgueseria</title>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <h1>BURGER</h1>
+
+    
+                    <input type="checkbox" id="btn_menu">
+                    <label for="btn_menu" class="label_menu"><img src="../img/outline_list_black_24dp.png" alt="barras" class="img_menu"></label>
+        
+
+            <div class="div_extra">
+                <input type="search" placeholder="buscar" class="buscador">
+            </div>
+
+            <div class="div_nav">
+                <ul class="nav_ul">
+                    <li class="nav_ul_li"><a href="../index.html" class="nav_ul_li_a">HOME</a></li>
+                    <li class="nav_ul_li"><a href="bebidad.html" class="nav_ul_li_a">BEBIDAS</a></li>
+                    <li class="nav_ul_li"><a href="ensalada.html" class="nav_ul_li_a">ENSALADAS</a></li>
+                    <li class="nav_ul_li"><a href="contacto.html" class="nav_ul_li_a">CONTACTO</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main id="main_registrar">
+            <div class="div_expli">
+                <h3>Registrarse</h3>
+                <p>Hola si queres saber nuestras ofertas o promos, te invitamo a registrarte.</p>
+            </div>
+            <div class="div_form">
+                <form action="cotacto" id="formulario">
+                    <label for="nombre_usuario" class="laber_titulos">Nombre</label>
+                    <input type="text" placeholder="escribir" class="input_escribir" required>
+                    <label for="apellido_usuario" class="laber_titulos">Apellido</label>
+                    <input type="text" placeholder="escribir" class="input_escribir" required>
+                    <label for="email_usuario" class="laber_titulos">Gmail</label>
+                    <input type="text" placeholder="escribir" class="input_escribir" required>
+                    <label for="telefono_usuario" class="laber_titulos">Telefono(opcional)</label>
+                    <input type="text" placeholder="escribir" class="input_escribir" required>
+                    <label for="contraseña_usuario" class="laber_titulos">Contraseña</label>
+                    <input type="password" placeholder="escribir" class="input_escribir" required>
+                    <button type="submit" id="boton_form">Enviar</button>
+                </form>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <h2>BURGER</h2>
+            <div class="div_contactos">
+                <div class="telefono">
+                    <img src="../img/outline_call_white_24dp.png" alt="telefono">
+                    <p>Telefono: 123 456 789</p>
+                </div>
+
+                <div class="gmail">
+                    <img src="../img/outline_email_white_24dp.png" alt="email">
+                    <p>Gmail: burger@gmail.com</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/registro.js"></script>
+</body>
+</html>

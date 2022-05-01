@@ -1,0 +1,17 @@
+//por las dudas
+if(maxCar() === true && minCar() === true && maxNum() === true && valEmail() === true){
+        console.log(`El nombre es: ${registrados.nombre} El appelido es: ${registrados.apellido} El email es: ${registrados.gmail} El telefono es: ${registrados.telefono} La contraseña es: ${registrados.contraseña}`);
+     }else{
+        alert('error');
+        console.log( maxCar())
+        console.log( minCar())
+        console.log( maxNum())
+        console.log(valEmail())
+    }
+
+
+   if (esValido===true){
+         return true
+   }else{
+        return 'Email incorreto'
+      }
